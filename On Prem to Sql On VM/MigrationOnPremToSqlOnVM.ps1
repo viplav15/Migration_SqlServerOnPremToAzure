@@ -1,10 +1,10 @@
 ﻿
-$SQLPasswordLocal = "VC#net1986@"
-$SQLPasswordVM = "VM#net1986@!#"
+$SQLPasswordLocal = "xxxxxxx"
+$SQLPasswordVM = "xxxxxxxx"
 
 $migrationInput = @{
     dmsInfo = @{
-        subscriptionId = "b1d15854-94e3-416f-b716-fc165ae430a7";
+        subscriptionId = "b1d15854-94e3-416f-b716-xxxxxxxx";
         resourceGroupName = "AzureSqlServerMigration";
         serviceName = "datamigrationservice";
         location = "East US";
@@ -62,10 +62,10 @@ New-AzDataMigrationToSqlVM `
     -SqlVirtualMachineName  $migrationInput.sqlTarget.SqlVirtualMachineName `
     -TargetDbName $migrationInput.sqlTarget.databaseName `
     -Kind "SqlVM" `
-    -Scope "/subscriptions/b1d15854-94e3-416f-b716-fc165ae430a7/resourceGroups/AzureSqlServerMigration/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachines/azuresqlvm" `
-    -MigrationService "/subscriptions/b1d15854-94e3-416f-b716-fc165ae430a7/resourceGroups/AzureSqlServerMigration/providers/Microsoft.DataMigration/sqlMigrationServices/datamigrationservice" `
-    -AzureBlobStorageAccountResourceId "/subscriptions/b1d15854-94e3-416f-b716-fc165ae430a7/resourceGroups/AzureSqlServerMigration/providers/Microsoft.Storage/storageAccounts/azuresqlstorageforvm" `
-    -AzureBlobAccountKey "0qmCmP6ndgYoDORuc8NyViB+uXi4VzM2iwYVIuPWVNYmLBVrsluhdvfHZBAAN8Rwv1Mioz20c5bY+AStLrZUHQ==" `
+    -Scope "/subscriptions/b1d15854-94e3-416f-b716-xxxxxxxxxxxxx/resourceGroups/AzureSqlServerMigration/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachines/azuresqlvm" `
+    -MigrationService "/subscriptions/b1d15854-94e3-416f-b716-xxxxxxxxxx/resourceGroups/AzureSqlServerMigration/providers/Microsoft.DataMigration/sqlMigrationServices/datamigrationservice" `
+    -AzureBlobStorageAccountResourceId "/subscriptions/b1d15854-94e3-416f-b716-xxxxxxxxxxx/resourceGroups/AzureSqlServerMigration/providers/Microsoft.Storage/storageAccounts/azuresqlstorageforvm" `
+    -AzureBlobAccountKey "0qmCmP6ndgYoDORuc8NyViB+uXi4VzM2iwYVIxxxxxxxxxxxxxxxxAAN8Rwv1Mioz20c5bY+AStLrZUHQ==" `
     -AzureBlobContainerName "backup" `
     -SourceSqlConnectionAuthentication "SqlAuthentication" `
     -SourceSqlConnectionDataSource $migrationInput.sqlSource.dataSource `
