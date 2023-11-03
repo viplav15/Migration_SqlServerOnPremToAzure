@@ -1,10 +1,10 @@
 
-$SQLPasswordLocal = "VC#net1986@"
-$SQLPasswordDB = "VC#net1986@"
+$SQLPasswordLocal = "xxxxxxx"
+$SQLPasswordDB = "xxxxxxx"
 
 $migrationInput = @{
     dmsInfo = @{
-        subscriptionId = "b1d15854-94e3-416f-b716-fc165ae430a7";
+        subscriptionId = "b1d15854-94e3-416f-b716-xxxxxxxx";
         resourceGroupName = "AzureSqlServerMigration";
         serviceName = "datamigrationservice";
         location = "East US";
